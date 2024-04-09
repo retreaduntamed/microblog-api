@@ -58,7 +58,7 @@ def users(num):  # pragma: no cover
 
 </SwmSnippet>
 
-<SwmSnippet path="/api/fake.py" line="36">
+<SwmSnippet path="/api/fake.py" line="38">
 
 ---
 
@@ -97,11 +97,11 @@ I am unable to embed a smart token into a code block to link the snippet to unde
 
 I am able to replicate the revision functionality below however it is more time consuming and less visually indicative of a copyable CLI command wrapped in a code block:
 
-`flask fake `<SwmToken path="/api/fake.py" pos="14:2:2" line-data="def users(num):  # pragma: no cover">`users`</SwmToken>` <`<SwmToken path="/api/fake.py" pos="36:6:6" line-data="@click.argument(&#39;num&#39;, type=int)">`num`</SwmToken>`>`
+`flask fake `<SwmToken path="/api/fake.py" pos="14:2:2" line-data="def users(num):  # pragma: no cover">`users`</SwmToken>` <`<SwmToken path="/api/fake.py" pos="38:6:6" line-data="@click.argument(&#39;num&#39;, type=int)">`num`</SwmToken>`>`
 
-`flask fake `<SwmToken path="/api/fake.py" pos="37:2:2" line-data="def posts(num):  # pragma: no cover">`posts`</SwmToken>` <`<SwmToken path="/api/fake.py" pos="36:6:6" line-data="@click.argument(&#39;num&#39;, type=int)">`num`</SwmToken>`>`
+`flask fake `<SwmToken path="/api/fake.py" pos="39:2:2" line-data="def posts(num):  # pragma: no cover">`posts`</SwmToken>` <`<SwmToken path="/api/fake.py" pos="38:6:6" line-data="@click.argument(&#39;num&#39;, type=int)">`num`</SwmToken>`>`
 
-It's important to know that the smart tokens will only alert when the names they are referring to change. This means that if the <SwmToken path="/api/fake.py" pos="14:2:2" line-data="def users(num):  # pragma: no cover">`users`</SwmToken> function name changes or the <SwmToken path="/api/fake.py" pos="36:6:6" line-data="@click.argument(&#39;num&#39;, type=int)">`num`</SwmToken> parameter where to change the CI will flag, however if the logic of the function changes then no alert will flag. This should not be a major issue assuming we don't regularly leave the name of a function the same while radically changing the underlying logic (rather than refactoring).
+It's important to know that the smart tokens will only alert when the names they are referring to change. This means that if the <SwmToken path="/api/fake.py" pos="14:2:2" line-data="def users(num):  # pragma: no cover">`users`</SwmToken> function name changes or the <SwmToken path="/api/fake.py" pos="38:6:6" line-data="@click.argument(&#39;num&#39;, type=int)">`num`</SwmToken> parameter where to change the CI will flag, however if the logic of the function changes then no alert will flag. This should not be a major issue assuming we don't regularly leave the name of a function the same while radically changing the underlying logic (rather than refactoring).
 
 &nbsp;
 
