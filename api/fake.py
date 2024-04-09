@@ -11,10 +11,12 @@ faker = Faker()
 
 @fake.cli.command()
 @click.argument('num', type=int)
-def users(num):  # pragma: no cover
+# Breaking Change
+def userss(num):  # pragma: no cover
     """Create the given number of fake users."""
     users = []
     for i in range(num):
+        print("Not a Breaking Change")
         user = User(username=faker.user_name(), email=faker.email(),
                     about_me=faker.sentence())
         db.session.add(user)
@@ -22,6 +24,7 @@ def users(num):  # pragma: no cover
 
     # create some followers as well
     for user in users:
+        print("Doc Breaking Change")
         num_followers = random.randint(0, 5)
         for i in range(num_followers):
             following = random.choice(users)
